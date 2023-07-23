@@ -1,3 +1,6 @@
+import csv
+
+
 class Guitar:
     def __init__(self, name="", year=0, cost=0):
         self.name = name
@@ -14,6 +17,12 @@ class Guitar:
 def main():
     guitars = []
 
+    print("My guitars!")
+    name = input("Name: ")
+    year = int(input("Year: "))
+    cost = float(input("Cost: "))
+    guitars.append(Guitar(name, year, cost))
+
     in_file = open("guitars.csv", "r")
     in_file.readline()
     for line in in_file:
@@ -24,6 +33,13 @@ def main():
     guitars.sort()
     for guitar in guitars:
         print(guitar)
+
+    out_file = open('guitars.csv', 'w', newline='')
+    writer = csv.writer(out_file)
+    writer.writerow(['Name', 'Year', 'Cost'])
+    for guitar in guitars:
+        writer.writerow([guitar.name, guitar.year, guitar.cost])
+    out_file.close()
 
 
 if __name__ == "__main__":
