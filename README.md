@@ -4,7 +4,7 @@
 
 - Readability counts
 - Good identifier naming
-- Follow pep 8
+- Don't repeat yourself
 
 [CP1404 Practicals instructions](https://github.com/CP1404/Practicals/tree/master#readme)\
 [Programming Patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns)
