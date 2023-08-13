@@ -56,6 +56,7 @@ run_tests()
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
 doctest.testmod()
 
+
 # TODO: 4. Fix the failing is_long_word function
 # (don't change the tests, change the function!)
 
@@ -68,3 +69,18 @@ doctest.testmod()
 # and one more you decide (one that is valid!)
 # test this and watch the tests fail
 # then write the body of the function so that the tests pass
+
+def phrase_to_sentence(phrase):
+    """
+    >>> phrase_to_sentence("hello")
+    Hello.
+    >>> phrase_to_sentence("It is an ex parrot.")
+    It is an ex parrot.
+    >>> phrase_to_sentence("this is something.")
+    This is something.
+    """
+
+    phrase = phrase.capitalize()
+    if not phrase.endswith("."):
+        phrase += "."
+    print(phrase)
